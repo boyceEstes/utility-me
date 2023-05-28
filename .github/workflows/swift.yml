@@ -24,7 +24,7 @@ jobs:
 #      run: swiftlint
 
     - name: Build for macOS
-      run: swift build -v --package-path UtilityMe/
+      run: swift build -v
       
     - name: Run macOS tests
-      run: swift test -v --package-path UtilityMe/
+      run: swift test -v
