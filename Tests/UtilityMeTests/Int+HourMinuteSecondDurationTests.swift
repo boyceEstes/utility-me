@@ -9,14 +9,14 @@ import XCTest
 import UtilityMe
 
 
-final class String_HourMinuteSecondDuration: XCTestCase {
+final class Int_HourMinuteSecondDuration: XCTestCase {
     
     func test_hourMinuteSecondDuration_fromZeroSecondDuration_deliversZero() {
         
         // given
         let durationInSeconds = 0
         // when
-        let hourMinuteSecondDurationString = String.hourMinuteSecondDuration(from: durationInSeconds)
+        let hourMinuteSecondDurationString = durationInSeconds.hourMinuteSecondDuration
         // then
         XCTAssertEqual(hourMinuteSecondDurationString, "00:00:00")
     }
@@ -27,7 +27,7 @@ final class String_HourMinuteSecondDuration: XCTestCase {
         // given
         let durationInSeconds = 123456789
         // when
-        let hourMinuteSecondDurationString = String.hourMinuteSecondDuration(from: durationInSeconds)
+        let hourMinuteSecondDurationString = durationInSeconds.hourMinuteSecondDuration
         // then
         XCTAssertEqual(hourMinuteSecondDurationString, "34293:33:09")
     }
@@ -38,7 +38,7 @@ final class String_HourMinuteSecondDuration: XCTestCase {
         // given
         let durationInSeconds = 60
         // when
-        let hourMinuteSecondDurationString = String.hourMinuteSecondDuration(from: durationInSeconds)
+        let hourMinuteSecondDurationString = durationInSeconds.hourMinuteSecondDuration
         // then
         XCTAssertEqual(hourMinuteSecondDurationString, "00:01:00")
     }
@@ -49,7 +49,7 @@ final class String_HourMinuteSecondDuration: XCTestCase {
         // given
         let durationInSeconds = 3600
         // when
-        let hourMinuteSecondDurationString = String.hourMinuteSecondDuration(from: durationInSeconds)
+        let hourMinuteSecondDurationString = durationInSeconds.hourMinuteSecondDuration
         // then
         XCTAssertEqual(hourMinuteSecondDurationString, "01:00:00")
     }
@@ -60,7 +60,7 @@ final class String_HourMinuteSecondDuration: XCTestCase {
         // given
         let durationInSeconds = 3599
         // when
-        let hourMinuteSecondDurationString = String.hourMinuteSecondDuration(from: durationInSeconds)
+        let hourMinuteSecondDurationString = durationInSeconds.hourMinuteSecondDuration
         // then
         XCTAssertEqual(hourMinuteSecondDurationString, "00:59:59")
     }

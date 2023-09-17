@@ -23,13 +23,4 @@ public extension Int {
         
         return (hour, minute, second)
     }
-    
-    
-    /// Deliver a string from duration in seconds with "1h 50m" format
-    var hourMinuteShortStringFormat: String {
-        
-        let (hour, minute, _) = self.hourMinuteSecondDurationValue
-        
-        return "\(hour)h \(minute)m"
-    }
 }
